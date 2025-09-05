@@ -6,6 +6,9 @@
 //
 //
 /// A container for template variables.
+///
+import Foundation
+
 open class Context
 {
     private var variables: [String: Token.Value]

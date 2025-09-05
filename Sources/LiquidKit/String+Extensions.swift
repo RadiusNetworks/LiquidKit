@@ -5,6 +5,8 @@
 //  Created by YourtionGuo on 29/06/2017.
 //
 //
+import Foundation
+
 extension String {
 
     func findFirstNot(character: Character) -> String.Index? {

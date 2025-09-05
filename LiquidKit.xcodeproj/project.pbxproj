@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,8 +26,9 @@
 		15CB06CD214353AF0023648A /* LiquidKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB06C9214353AF0023648A /* LiquidKitTests.swift */; };
 		15CB06CE214353AF0023648A /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB06CA214353AF0023648A /* ParserTests.swift */; };
 		15CB06CF214353AF0023648A /* LexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB06CB214353AF0023648A /* LexerTests.swift */; };
+		90DED32A2E6AA43C000A3FF3 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 90DED3292E6AA43C000A3FF3 /* HTMLEntities */; };
+		90DED32C2E6AA5A1000A3FF3 /* STRFTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DED32B2E6AA59D000A3FF3 /* STRFTimeFormatter.swift */; };
 		A0D0D357C918572FF31414C9 /* Pods_LiquidKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5C29938FF0409DBB4F439C /* Pods_LiquidKitTests.framework */; };
-		A7403C97398CE92D88F31F3D /* Pods_LiquidKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F60B25220E55AF797E10EE /* Pods_LiquidKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		56A043B9373D66E61E4AE9F9 /* Pods-LiquidKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiquidKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiquidKit/Pods-LiquidKit.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5C29938FF0409DBB4F439C /* Pods_LiquidKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiquidKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B82FE65BD2E68ACDF00409 /* Pods-LiquidKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiquidKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiquidKit/Pods-LiquidKit.release.xcconfig"; sourceTree = "<group>"; };
+		90DED32B2E6AA59D000A3FF3 /* STRFTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STRFTimeFormatter.swift; sourceTree = "<group>"; };
 		AFBB966467B345AC36B068C9 /* Pods_LiquidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiquidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25A21878450F21290306779 /* Pods_Liquid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liquid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65DEF7DAFF690CF3D4E6632 /* Pods-LiquidKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiquidKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiquidKitTests/Pods-LiquidKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7403C97398CE92D88F31F3D /* Pods_LiquidKit.framework in Frameworks */,
+				90DED32A2E6AA43C000A3FF3 /* HTMLEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,7 @@
 		15CB06A1214353360023648A /* LiquidKit */ = {
 			isa = PBXGroup;
 			children = (
+				90DED32B2E6AA59D000A3FF3 /* STRFTimeFormatter.swift */,
 				15CB06BE214353A70023648A /* Context.swift */,
 				15CB06BA214353A70023648A /* Error.swift */,
 				152FDD2621485F41003C2C63 /* Tag.swift */,
@@ -190,7 +193,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15CB06B5214353360023648A /* Build configuration list for PBXNativeTarget "LiquidKit" */;
 			buildPhases = (
-				93A0A6A429907230A98ED708 /* [CP] Check Pods Manifest.lock */,
 				15CB069A214353360023648A /* Headers */,
 				15CB069B214353360023648A /* Sources */,
 				15CB069C214353360023648A /* Frameworks */,
@@ -236,7 +238,7 @@
 				TargetAttributes = {
 					15CB069E214353360023648A = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1610;
 					};
 					15CB06A7214353360023648A = {
 						CreatedOnToolsVersion = 10.0;
@@ -252,6 +254,9 @@
 				en,
 			);
 			mainGroup = 15CB06932143513E0023648A;
+			packageReferences = (
+				90DED3282E6AA43B000A3FF3 /* XCRemoteSwiftPackageReference "swift-html-entities" */,
+			);
 			productRefGroup = 15CB06A0214353360023648A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -318,24 +323,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiquidKitTests/Pods-LiquidKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93A0A6A429907230A98ED708 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LiquidKit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,6 +336,7 @@
 				1544DA0921699888008EF8EC /* NSRegularExpression+Additions.swift in Sources */,
 				15CB06C5214353A70023648A /* Filter.swift in Sources */,
 				15CB06C7214353A70023648A /* Context.swift in Sources */,
+				90DED32C2E6AA5A1000A3FF3 /* STRFTimeFormatter.swift in Sources */,
 				1532BE53214E8A47009AE815 /* Operator.swift in Sources */,
 				15CB06C4214353A70023648A /* Lexer.swift in Sources */,
 				152FDD2721485F41003C2C63 /* Tag.swift in Sources */,
@@ -492,6 +480,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -518,6 +507,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.LiquidKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -577,6 +568,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -596,6 +588,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.LiquidKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -782,6 +776,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90DED3282E6AA43B000A3FF3 /* XCRemoteSwiftPackageReference "swift-html-entities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/swift-html-entities.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90DED3292E6AA43C000A3FF3 /* HTMLEntities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90DED3282E6AA43B000A3FF3 /* XCRemoteSwiftPackageReference "swift-html-entities" */;
+			productName = HTMLEntities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15CB06942143513E0023648A /* Project object */;
 }
